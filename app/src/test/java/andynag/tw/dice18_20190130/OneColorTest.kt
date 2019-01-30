@@ -11,14 +11,16 @@ class OneColorTest {
         val expectIntArrayAllOne = listOf(
             Dice(1), Dice(1), Dice(1), Dice(1))
 //        val dices:List<Dice> = listOf()
-            //TODO: Many dice)
-        // convert one to array
         val actualList:List<Dice> = Bowl(inputDiceAllOne).getDices()
 
         Assert.assertEquals(expectIntArrayAllOne,actualList)
-
     }
 
+    @Test
+    fun test_dice_have_18la() {
+        val inputDiceAllOne = "[1,1,2,3]"
+        val expectIntArray = listOf(
+            Dice(1), Dice(1), Dice(6), Dice(6))
 
-
+    }
 }
