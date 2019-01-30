@@ -13,11 +13,18 @@ class Bowl(val input : String) {
         }
 
         if(group.size == 2){
-            group[0]!!.size
+            val groupSize1 = group[0]!!.size
+            val groupSize2 = group[1]!!.size
+            if(groupSize1 == 2 && groupSize2 == 2){
+                var hasNumberSix = group[0]!!.any { it.value == 6 }
+                if(hasNumberSix){
+                    return group[1]!!.any { it.value != 6 }
 
+                }
+            }
         }
 
-        return true
+        return false
     }
 
 }
