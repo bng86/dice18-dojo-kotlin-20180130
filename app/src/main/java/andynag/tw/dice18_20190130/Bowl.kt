@@ -1,11 +1,10 @@
 package andynag.tw.dice18_20190130
 
-object ConvertArray {
+class Bowl() {
     fun stringToIntArray(pointString: String): List<Int> {
-        pointString.substringAfter("[")
+        return pointString.substringAfter("[")
             .substringBefore("]")
-            .split(",").toList()
-        return listOf(1, 1, 1, 1)
+            .split(",").toList().map { it.toInt() }
     }
 
 }

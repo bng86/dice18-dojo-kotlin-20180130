@@ -6,14 +6,18 @@ import org.junit.Test
 class OneColorTest {
 
     @Test
-    fun test_dice_string_to_intArray_success() {
-        val input_dice_all_one: String = "[1,1,1,1]"
-        val expect_intArray_all_one = listOf(1, 1, 1, 1)
+    fun test_dice_is_all_same() {
+        val inputDiceAllOne = "[1,1,1,1]"
+        val expectIntArrayAllOne = listOf(1, 1, 1, 1)
+//        val dices:List<Dice> = listOf()
+            //TODO: Many dice)
         // convert one to array
-        val actualList:List<Int> = ConvertArray.stringToIntArray(input_dice_all_one)
+        val actualList:List<Int> = Bowl().stringToIntArray(inputDiceAllOne)
 
-        Assert.assertEquals(expect_intArray_all_one,actualList)
+        Assert.assertEquals(expectIntArrayAllOne,actualList)
 
     }
+
+
 
 }
