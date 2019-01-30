@@ -7,7 +7,16 @@ class Bowl(val input : String) {
             .split(",").toList().map { Dice(it.toInt()) }
     }
 
-    fun hasTwoSix(expectIntArray: List<Dice>): Boolean {
+    fun isSepatla(): Boolean {
+        val group = getDices().groupBy {
+            it.value
+        }
+
+        if(group.size == 2){
+            group[0]!!.size
+
+        }
+
         return true
     }
 
