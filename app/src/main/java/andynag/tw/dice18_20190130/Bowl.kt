@@ -1,6 +1,6 @@
 package andynag.tw.dice18_20190130
 
-class Bowl(val input : String) {
+class Bowl(val input: String) {
     fun getDices(): List<Dice> {
         return input.substringAfter("[")
             .substringBefore("]")
@@ -12,19 +12,12 @@ class Bowl(val input : String) {
             it.value
         }
 
-        if(group.size == 2){
-            val groupSize1 = group[0]!!.size
-            val groupSize2 = group[1]!!.size
-            if(groupSize1 == 2 && groupSize2 == 2){
-                var hasNumberSix = group[0]!!.any { it.value == 6 }
-                if(hasNumberSix){
-                    return group[1]!!.any { it.value != 6 }
 
-                }
-            }
+        return if (group.size == 2 && !group.any { it.value.size > 2 }) {
+            group.get(6)?.isNotEmpty() == true
+        } else {
+            false
         }
-
-        return false
     }
 
 }
