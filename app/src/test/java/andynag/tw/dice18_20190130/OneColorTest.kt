@@ -17,10 +17,13 @@ class OneColorTest {
     }
 
     @Test
-    fun test_dice_have_18la() {
-        val inputDiceAllOne = "[1,1,2,3]"
+    fun test_dice_have_Sepatla() {
+        val inputDiceAllOne = "[1,1,6,6]"
         val expectIntArray = listOf(
             Dice(1), Dice(1), Dice(6), Dice(6))
-
+        val bowl = Bowl(inputDiceAllOne)
+        val actual = bowl.getDices()
+        val expected = bowl.hasTwoSix(expectIntArray)
+        Assert.assertEquals(expected, actual)
     }
 }

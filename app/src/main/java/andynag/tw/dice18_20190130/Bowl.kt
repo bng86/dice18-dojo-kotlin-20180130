@@ -7,4 +7,8 @@ class Bowl(val input : String) {
             .split(",").toList().map { Dice(it.toInt()) }
     }
 
+    fun hasTwoSix(expectIntArray: List<Dice>): Boolean {
+        return true
+    }
+
 }
