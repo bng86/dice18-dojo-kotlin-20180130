@@ -27,4 +27,29 @@ class OneColorTest {
 
         Assert.assertEquals(expected, actual)
     }
+
+
+    @Test
+    fun test_dice_no_point_three_same() {
+
+        val inputDiceAllOne = "[1,1,1,6]"
+        val bowl = Bowl(inputDiceAllOne)
+        val actual = bowl.isNoPoint()
+        val expected = true
+
+        Assert.assertEquals(expected, actual)
+
+    }
+
+    @Test
+    fun test_dice_no_point_diff() {
+
+        val inputDiceAllOne = "[1,2,3,6]"
+        val bowl = Bowl(inputDiceAllOne)
+        val actual = bowl.isNoPoint()
+        val expected = true
+
+        Assert.assertEquals(expected, actual)
+
+    }
 }

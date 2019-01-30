@@ -20,4 +20,17 @@ class Bowl(val input: String) {
         }
     }
 
+    fun isNoPoint(): Boolean {
+        val group = getDices().groupBy {
+            it.value
+        }
+
+        val groupSize =group.size
+
+        return if(groupSize == 2 && group.any { it.value.size == 3 }){
+            true
+        }else groupSize == 4
+
+    }
+
 }
