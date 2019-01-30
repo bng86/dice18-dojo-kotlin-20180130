@@ -1,7 +1,7 @@
 package andynag.tw.dice18_20190130
 
-object TranseArray {
-    fun convertToArray(pointString: String): List<Int> {
+object ConvertArray {
+    fun stringToIntArray(pointString: String): List<Int> {
         pointString.substringAfter("[")
             .substringBefore("]")
             .split(",").toList()

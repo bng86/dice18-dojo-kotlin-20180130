@@ -6,14 +6,14 @@ import org.junit.Test
 class OneColorTest {
 
     @Test
-    fun test_one_color() {
-        val one = "[1,1,1,1]"
-        val oneArr = listOf(1, 1, 1, 1)
+    fun test_dice_string_to_intArray_success() {
+        val input_dice_all_one: String = "[1,1,1,1]"
+        val expect_intArray_all_one = listOf(1, 1, 1, 1)
         // convert one to array
-        val converted:List<Int> = TranseArray.convertToArray(one)
-        Assert.assertEquals(oneArr,converted)
+        val actualList:List<Int> = ConvertArray.stringToIntArray(input_dice_all_one)
+
+        Assert.assertEquals(expect_intArray_all_one,actualList)
 
     }
-
 
 }
