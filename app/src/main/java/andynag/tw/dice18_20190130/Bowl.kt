@@ -1,10 +1,10 @@
 package andynag.tw.dice18_20190130
 
-class Bowl() {
-    fun stringToIntArray(pointString: String): List<Int> {
-        return pointString.substringAfter("[")
+class Bowl(val input : String) {
+    fun getDices(): List<Dice> {
+        return input.substringAfter("[")
             .substringBefore("]")
-            .split(",").toList().map { it.toInt() }
+            .split(",").toList().map { Dice(it.toInt()) }
     }
 
 }

@@ -8,11 +8,12 @@ class OneColorTest {
     @Test
     fun test_dice_is_all_same() {
         val inputDiceAllOne = "[1,1,1,1]"
-        val expectIntArrayAllOne = listOf(1, 1, 1, 1)
+        val expectIntArrayAllOne = listOf(
+            Dice(1), Dice(1), Dice(1), Dice(1))
 //        val dices:List<Dice> = listOf()
             //TODO: Many dice)
         // convert one to array
-        val actualList:List<Int> = Bowl().stringToIntArray(inputDiceAllOne)
+        val actualList:List<Dice> = Bowl(inputDiceAllOne).getDices()
 
         Assert.assertEquals(expectIntArrayAllOne,actualList)
 
